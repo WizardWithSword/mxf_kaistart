@@ -8,7 +8,16 @@
 <div id="app">
   {{ message }}
 </div>
-<script type="text/javascript" src="./static/js/vue.js"></script>
-<script type="text/javascript" src="./js/index.js"></script>
+<script type="text/javascript" src="./static/js/sea.js"></script>
+<script type="text/javascript">
+  seajs.config({
+    base: "../static/js",
+    alias: {
+      "vue": "../static/js/vue.js"
+    }
+  });
+  // 加载入口模块
+  seajs.use("./js/index.js");
+</script>
 </body>
 </html>
