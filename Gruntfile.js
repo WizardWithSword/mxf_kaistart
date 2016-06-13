@@ -9,17 +9,19 @@ module.exports = function(grunt) {
 		uglify: {
 			// 这里是uglify任务的配置信息
 			options: {
+				mangle: {
+          	except: ['require', 'exports', 'module', 'window']
+          },
 				banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
 			},
 			build: {
-				src: ['src/**/**.js'],
+				src: ['src/js/**.js'],
 				dest: 'dist/js/all.js'
 			}
 		},
 		// 任意数据。
 		my_property: 'whatever',
 		my_src_files: ['src/**/*.js']
-
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-uglify');
