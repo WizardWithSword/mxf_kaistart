@@ -3,6 +3,7 @@ var rootPath = path.dirname(__dirname);
 console.log('根目录')
 console.log(rootPath)
 var HtmlwebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack')
 
 // webpack.config.js
 module.exports = {
@@ -10,16 +11,16 @@ module.exports = {
   entry: './src/js/index.js',
   // where to place the compiled bundle
   output: {
-    path: './dist/js',
+    path: './dist/',
     filename: 'app.js'
   },
-   devtool: 'eval-source-map',
+  // devtool: 'eval-source-map',
   devServer: {
     contentBase: './dist/'
   },
- plugins: [
+  plugins: [
     // //这个使用uglifyJs压缩你的js代码
-    // new webpack.optimize.UglifyJsPlugin({minimize: true}),
+    new webpack.optimize.UglifyJsPlugin({minimize: true}),
     // //把入口文件里面的数组打包成verdors.js
     // new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
     new HtmlwebpackPlugin({
