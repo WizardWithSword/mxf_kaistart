@@ -1,5 +1,5 @@
 define(function(require, exports, module) {
-	require('vue');
+	var Vue = require('vue');
   var qrcode = require('arale-qrcode');
   var qrnode = new qrcode({
       text: 'http://www.kaistart.com/',
@@ -10,11 +10,10 @@ define(function(require, exports, module) {
 
   var qrnode1 = new qrcode({
       text: 'http://www.kaistart.com/?from=yirenyicheng',
-      size:200,
+      size:220,
       image: 'http://kaiman.kaistart.com/project-code.png',
-      imageSize: 30
+      imageSize: 35
   });
-
   document.getElementById('qrcodeDefault').appendChild(qrnode)
   document.getElementById('qrcodeDefault').appendChild(qrnode1);
 	module.exports = {};

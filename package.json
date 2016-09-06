@@ -10,12 +10,13 @@
     "vue-loader": "^8.5.2",
     "vue-style-loader": "^1.0.0",
     "webpack": "^1.13.2",
+    "html-webpack-plugin": "^2.22.0",
     "webpack-dev-server": "^1.15.1"
   },
   "description": "idont't know what's this.i just cin 'npm init'",
   "main": "index.html",
   "scripts": {
-    "start":"webpack-dev-server --inline",
+    "start": "webpack-dev-server --hot --inline",
     "test": "go"
   },
   "repository": {
@@ -39,7 +40,7 @@
   },
   "homepage": "https://github.com/WizardWithSword/mxf_kaistart#readme",
   "dependencies": {
-    "arale-qrcode":"3.0.5",
+    "arale-qrcode": "3.0.5",
     "vue": "^1.0.26"
   }
 }
