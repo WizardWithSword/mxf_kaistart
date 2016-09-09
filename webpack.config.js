@@ -16,6 +16,10 @@ module.exports = {
   },
   // devtool: 'eval-source-map',
   devServer: {
+    historyApiFallback: true,
+    hot: true,
+    inline: true,
+    progress: true,
     contentBase: './dist/'
   },
   plugins: [
@@ -39,6 +43,9 @@ module.exports = {
     }, {
       test: /\.vue$/, // a regex for matching all files that end in `.vue`
       loader: 'vue' // loader to use for matched files
+    },{
+      test: /\.css$/,
+      loaders: ['style', 'css']
     }]
   }
 }
