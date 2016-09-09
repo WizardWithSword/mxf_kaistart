@@ -1,0 +1,11 @@
+var res = {
+  "posion": [{
+    "id":"xxxxx1",
+    "date": "2016-09-07 10:46:55",
+    "title": "骨感的现实",
+    "content": "命运不出，因果称雄。",
+    "wizardThought": "",
+    "comment": [{}]
+  }]
+}
+module.exports = res
