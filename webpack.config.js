@@ -14,7 +14,7 @@ module.exports = {
     path: './dist/',
     filename: 'app.js'
   },
-  // devtool: 'eval-source-map',
+  devtool: 'eval-source-map',
   devServer: {
     historyApiFallback: true,
     hot: true,

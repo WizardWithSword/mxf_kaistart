@@ -25,6 +25,9 @@ define(function(require, exports, module) {
 		el: '#app',
 		data: {
       posion : data[0]
+    },
+    ready: function () {
+      consoel.log('ready!!!')
     }
 	});
   console.log(vv);
